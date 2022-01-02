@@ -2,7 +2,7 @@
 Minecraft Spigot Plugin: Extension for PastimeGamesAPI to work as a standard plugin and be used.
 Collection of minigames to play.
 
-Minecraft versions: 1.14 - 1.18
+Minecraft versions: 1.18
 
 Get more Information about the functions: comming soon
 
