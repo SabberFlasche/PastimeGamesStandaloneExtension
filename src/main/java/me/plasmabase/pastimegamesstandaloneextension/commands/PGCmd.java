@@ -26,14 +26,14 @@ public class PGCmd implements TabExecutor {
         Player player = (Player) sender;
         try {
             switch (args[0]) {
-                case "reload":
+                /*case "reload":
                     if (player.hasPermission("pastimegames.reload")) {
                         Main.settingsHandler().reload();
                         player.sendMessage(Main.settingsHandler().reloadMessage());
                     }else {
                         player.sendMessage(Main.settingsHandler().noPermissionMessage());
                     }
-                    return true;
+                    return true;*/
                 case "config":
                     if (player.hasPermission("pastimegames.config")) {
                         if (args.length >= 3) {
@@ -182,7 +182,7 @@ public class PGCmd implements TabExecutor {
                 list.add("config");
             }
             if (player.hasPermission("pastimegames.reload")) {
-                list.add("reload");
+                //list.add("reload");
             }
             list.add("stats");
             list.add("help");
