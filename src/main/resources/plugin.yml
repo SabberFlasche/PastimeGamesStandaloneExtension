@@ -1,0 +1,21 @@
+name: PastimeGamesStandaloneExtension
+version: '${project.version}'
+main: me.plasmabase.pastimegamesstandaloneextension.Main
+api-version: 1.13
+prefix: PastimeGames
+depend: [ PastimeGames ]
+authors: [ PlasmaBase ]
+description: Extension for PastimeGamesAPI to work without another plugin
+commands:
+  connect4:
+    description: Sends a request to a player to play connect4 with you
+    usage: /connect4 PLAYERNAME
+  tictactoe:
+    description: Sends a request to a player to play tictactoe with you
+    usage: /tictactoe PLAYERNAME
+  accept:
+    description: Accepts a request
+    usage: /accept or click [ Accept ] in chat
+  pg:
+    description: All admin-related settings and tools are here
+    usage: /pg help

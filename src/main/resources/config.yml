@@ -1,0 +1,2 @@
+version: "0.0.2"
+restrict_creation_of_games_to_permission: false
