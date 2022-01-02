@@ -23,16 +23,20 @@ public class SettingsHandler {
         settingsValues = new HashMap<>();
         this.config = Main.plugin().getConfig();
         this.version = Main.plugin().getDescription().getVersion();
+        this.loadDescriptions();
         this.loadConfig();
         this.checkVersion();
     }
 
-    public void loadConfig() {
+    public void loadDescriptions() {
         //SettingsList
         this.settingsList.put("reloadMessage", "Displayed when you reload the config");
         this.settingsList.put("noPermissionMessage", "Displayed when you have no permission to do something");
         this.settingsList.put("wrongSyntaxMessage", "Displayed when the syntax of a command is wrong");
         this.settingsList.put("restrictedGameCreation", "If you need permission \"pastimegames.play\" to create a game");
+    }
+
+    public void loadConfig() {
         //SettingsValues
         this.settingsValues.put("reloadMessage", this.settingsManager.reloadMessage());
         this.settingsValues.put("noPermissionMessage", this.settingsManager.noPermissionMessage());
@@ -68,9 +72,9 @@ public class SettingsHandler {
      */
     public void reload() {
         Main.plugin().reloadConfig();
+        this.settingsManager.reloadConfig();
         this.loadConfig();
         this.checkVersion();
-        this.settingsManager.reloadConfig();
     }
 
     /**
